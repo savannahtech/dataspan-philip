@@ -9,7 +9,7 @@ My Deployment URL= https://h7pdiewrb7.execute-api.us-east-1.amazonaws.com/Prod/d
 
 * The easiest way to deploy the code in this repo is to clone the repo
 
-``` git clone git@github.com:philipokiokio/ds_serverless.git ```
+``` git clone git@github.com:savannahtech/dataspan-philip.git ```
 
 * The next step is to export the ```AWS_SECRET``` and ```AWS_SECRET_KEY``` which is the alternative to the AWS SECRET embeded sucesssfully in the *environmnental_variables* of the computer.
 
