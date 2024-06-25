@@ -26,6 +26,16 @@ def service_handler(event, context):
         }
 
     try:
+        """
+        If the job is limited to 5 people the approach would include 
+        1. The user_uid: this can be extracted via the auth token.
+        2. The user_uid is store with every job record in dynamo db with the user_uid. 
+        3. This user_uid is then used to query the record of active job as such the filter case is user_uid== user_uid AND status=="ACTIVE"
+        4. This case above combine assures that it is impossible to have more than 5 when combine with the rest of the architecture.
+        """
+
+
+
         response = dynamodb.scan(
             TableName=TABLE_NAME,
             FilterExpression="JobStatus = :job_status",
